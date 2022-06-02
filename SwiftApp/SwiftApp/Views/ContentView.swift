@@ -18,7 +18,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Text("🎯🎯🎯\nPUT THE BULLSEYE AS CLOSE AS YOU CAN TO")
+            Text("🎯🎯🎯\nPut the bulleye as close as you can to".uppercased())
                 .bold()
                 .kerning(2.0)
                 .multilineTextAlignment(.center)
@@ -33,11 +33,20 @@ struct ContentView: View {
                 Slider(value: self.$slideValue, in: 1.0...100.00)
                 Text("100").bold().font(.body)
             }
+            .padding()
+
             Button(action: {
                 self.alertIsVisible = true;
             }) {
-                Text("Hit me")
+                Text("Hit me".uppercased())
+                    .bold()
+                    .font(.title3)
             }
+            .padding(20.0)
+            .background(Color.blue)
+            .foregroundColor(Color.white)
+            .cornerRadius(21.0)
+            
             // First version of "Hit me" alert
             .alert("Hello there!", isPresented: $alertIsVisible) {
               Button("Awesome!") { }
