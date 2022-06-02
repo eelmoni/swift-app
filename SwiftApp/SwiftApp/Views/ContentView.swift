@@ -24,7 +24,7 @@ struct ContentView: View {
                 .multilineTextAlignment(.center)
                 .lineSpacing(4.0)
                 .font(.footnote)
-            Text(String(self.game.target))
+            Text(String(game.target))
                 .kerning(-1.0)
                 .font(.largeTitle)
                 .fontWeight(.black)
